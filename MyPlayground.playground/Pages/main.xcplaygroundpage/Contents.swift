@@ -16,13 +16,17 @@ let y = 12
 let a = 321
 let b = 32
 
-
-
-
 /*: Question 1
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
 
+
+switch a % b == 0 {
+    
+case true: print("true")
+default: print("false")
+
+}
 
 
 
@@ -33,8 +37,10 @@ let b = 32
 /*: Question 2
 ### **(2)** Print 'true' if y divided by x is greater than three, otherwise print 'false'.
 */
-
-
+switch y % Int(x) > 3 {
+case true: print("true")
+default: print("false")
+}
 
 
 
@@ -45,7 +51,10 @@ let b = 32
 */
 
 
-
+switch y > Int(x) && a / b > 9 {
+case true: print("true")
+default: "false"
+}
 
 
 
@@ -57,7 +66,16 @@ let b = 32
 
 
 
+func isGreater(a:Int, b:Int) -> String {
+    switch a>b {
+    case true:
+        return "yep"
+    default:
+        return "nope"
+    }
+}
 
+isGreater(3, b: 5)
 
 
 
@@ -72,7 +90,16 @@ let b = 32
  ```
 */
 
+func isForceWith(personName: String) -> Bool {
+    switch personName {
+    case "Luke":
+        return true
+    default:
+        return false
+    }
+}
 
+isForceWith("Luke")
 
 
 
@@ -90,7 +117,20 @@ let b = 32
 
 
 
+func isInRange(firstNumber:Int){
+    switch firstNumber {
+    case 0...3:
+        print("small")
+    case 4...6:
+        print("medium")
+    case 7...10:
+        print("big")
+    default:
+        print("not sure")
+    }
+}
 
+isInRange(12)
 
 
 
